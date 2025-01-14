@@ -1,11 +1,6 @@
 .personal-info-container {
     display: flex;
-    justify-content: space-between;
     padding: 20px;
-    background-color: lime;
+    margin: 10px;
+    gap: 1px;
   }
-
-  .h2 {
-    margin-bottom: 10px;
-  }
-
