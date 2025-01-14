@@ -1,0 +1,11 @@
+.education-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.education-preview-section {
+    width: 50%;
+    padding: 20px;
+    border: 1px solid black;
+}

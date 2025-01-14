@@ -1,0 +1,11 @@
+.personal-info-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: lime;
+  }
+
+  .h2 {
+    margin-bottom: 10px;
+  }
+
