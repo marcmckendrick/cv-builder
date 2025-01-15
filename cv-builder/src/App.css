@@ -35,12 +35,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* Form  */
-
-.form-editing-section h2 {
-  background-color: lightskyblue;
-}
-
 /* Personal Info */
 
 .personal-info-header {
@@ -49,15 +43,22 @@ h1 {
     flex-direction: column;
     border: 1px groove;
     border-radius: 5px;
-}
-
-.personal-info-header {
-  background-color: lightskyblue;
-  padding: 10px;
-  align-items: center;
+    background-color: lightskyblue;
+    padding: 10px;
+    align-items: center;
 }
 
 /* Education */
 
+.education-container-header {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  border: 1px groove;
+  border-radius: 5px;
+  background-color: lightskyblue;
+  padding: 10px;
+  align-items: center;
+}
 
 /* Preview Section */

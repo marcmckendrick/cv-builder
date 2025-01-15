@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import PersonalInfo from "./components/PersonalInfo";
 import Education from "./components/Education";
 import PreviewSection from "./components/PreviewSection";
-import "./App.css";
 import Experience from "./components/Experience";
+import Skills from "./components/Skills";
+
+import "./App.css";
 
 function App() {
   const [formData, setFormData] = useState({
@@ -30,10 +32,9 @@ function App() {
     }));
   };
 
-  const [isPersonalInfoCardVisible, setPersonalInfoCardVisability] = useState(true);
+  const [isPersonalInfoCardVisible, setPersonalInfoCardVisability] =
+    useState(true);
   const [isEducationCardVisible, setEducationCardVisability] = useState(false);
-
-  
 
   return (
     <div className="App">
@@ -42,7 +43,11 @@ function App() {
         <div className="form-editing-section">
           <div className="personal-info">
             <div className="personal-info-header">
-              <h2 onClick={() => setPersonalInfoCardVisability(!isPersonalInfoCardVisible)}>
+              <h2
+                onClick={() =>
+                  setPersonalInfoCardVisability(!isPersonalInfoCardVisible)
+                }
+              >
                 Personal Info {isPersonalInfoCardVisible ? "(^)" : "()"}
               </h2>
             </div>
@@ -60,29 +65,40 @@ function App() {
 
           <div className="education-container">
             <div className="education-container-header">
-              <h2 onClick={() => setEducationCardVisability(!isEducationCardVisible)}>
-                Education {isEducationCardVisible ? "" : ""}</h2>
+              <h2
+                onClick={() =>
+                  setEducationCardVisability(!isEducationCardVisible)
+                }
+              >
+                Education {isEducationCardVisible ? "(^)" : "()"}
+              </h2>
             </div>
-            {isEducationCardVisible && (
-            <Education
-              data={formData.education}
-              onChange={(updatedData) =>
-                handleSectionChange("education", updatedData)
-              }
-            />
-          )}
+            <div className="education-container-content">
+              {isEducationCardVisible && (
+                <Education
+                  data={formData.education}
+                  onChange={(updatedData) =>
+                    handleSectionChange("education", updatedData)
+                  }
+                />
+              )}
+            </div>
           </div>
 
           <Experience
-            data={formData.experience}
+            data={formData.education}
             onChange={(updatedData) =>
               handleSectionChange("experience", updatedData)
             }
           />
+
+          <Skills 
+          
+          />
         </div>
         <div className="preview-section">
-            <PreviewSection formData={formData} />
-          </div>
+          <PreviewSection formData={formData} />
+        </div>
       </div>
     </div>
   );

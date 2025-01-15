@@ -1,7 +1,8 @@
 .education-container {
     display: flex;
-    justify-content: space-between;
     padding: 20px;
+    margin: 10px;
+    gap: 1px;
 }
 
 .h2 {
